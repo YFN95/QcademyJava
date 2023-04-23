@@ -1,6 +1,6 @@
 package Aufgabe2;
 
-public class Auto {
+ class Auto {
     private String kfzKennzeichen;
    private  double kilometerstnd;
    private  double tankVolumen;

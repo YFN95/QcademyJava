@@ -35,8 +35,14 @@ public class BankKonto {
         System.out.println("Du hast eine Einzahlung von "+summe+ " getätigt");
     }
     public void auszahlung(double summe){
-        this.kontoStand -= summe;
-        System.out.println("Du hast eine Auszahlung von "+summe+ " getätigt");
+        if(this.kontoStand -summe >= -this.limit){
+            this.kontoStand -= summe;
+            System.out.println("Du hast eine Auszahlung von "+summe+ " getätigt");
+        } else{
+            System.out.println("Sie haben das Limit fürs Konto überzogen");
+            this.kontoStand -=summe;
+        }
+
     }
     public void zeigeKontostand(){
         System.out.println("Dein aktueller Kontostand lautet: "+this.kontoStand);
